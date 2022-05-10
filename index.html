@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid-template-rows, grid-template-columns</title>
+<style>
+/*  добавил body s -- class */
+.s {
+    display: grid;
+    column-gap: 1px;
+    column-rule-style: hidden;
+    column-rule-width: 1px;
+    border: 2px solid red;
+}
+/* размер виде */
+.video_box{
+    width: 720px;
+    height: 405px;
+}
+/* размер картинок */
+img{
+    width: 160px;
+    height: 80px;
+}
+/* эфект  при наведение меняется курсор */
+img:hover{
+cursor:pointer;
+}
+</style>
+
+</head>
+<body class = "s">
+    <div class="left_block">
+        <video width="400" controls class="video_box">
+            <source src="https://www.s192.ru/webm/JacksonWang@GOT7-100Ways.1080p.webm" type="video/webm">
+        </video>
+    </div>
+    <div class="right_block">
+        <div class="colump_one">
+            <img class="img_1" src="http://s192.ru/img/AllForYou.png" alt="">
+           <img class="img_2" src="http://s192.ru/img/Rose.png" alt="">
+            <img class="img_3" src="http://s192.ru/img/Panorama.png" alt="">
+        </div>
+    </div>
+    <div class="colump_two">
+        <img class="img_4" src="http://s192.ru/img/TheDoor.png" alt="">
+        <img class="img_5" src="http://s192.ru/img/IfYouComeinMyHeart.png" alt="">
+        <img class="img_6" src="http://s192.ru/img/MafiaDance.png" alt="">
+    </div>
+</div>
+<script>
+let img_one = document.querySelector(".img_1");
+let img_two = document.querySelector(".img_2");
+let img_three = document.querySelector(".img_3");
+let img_four = document.querySelector(".img_4");
+let img_five = document.querySelector(".img_5");
+let img_six = document.querySelector(".img_6");
+// код первого изображения
+img_one.onmouseover =() =>{
+    img_one.src = "http://s192.ru/img/AllForYou.webp";
+} 
+img_one.onmouseout =() =>{
+    img_one.src = "http://s192.ru/img/AllForYou.png";
+} 
+img_one.onclick =() =>{
+    window.open("https://www.youtube.com/watch?v=wEgvCBcfFLI&ab_channel=Beginagain%EB%B9%84%EA%B8%B4%EC%96%B4%EA%B2%8C%EC%9D%B8");
+} 
+// код второго изображения
+img_two.onmouseover =() =>{
+    img_two.src = "http://s192.ru/img/TheDoor.webp";
+} 
+img_two.onmouseout =() =>{
+    img_two.src = "http://s192.ru/img/TheDoor.png";
+} 
+img_two.onclick =() =>{
+    window.open("https://www.youtube.com/watch?v=UbMLYO4gKvQ&ab_channel=Beginagain%EB%B9%84%EA%B8%B4%EC%96%B4%EA%B2%8C%EC%9D%B8");
+}
+// код третего изображения
+img_three.onmouseover =() =>{
+    img_three.src = "http://s192.ru/img/Rose.webp";
+} 
+img_three.onmouseout =() =>{
+    img_three.src = "http://s192.ru/img/Rose.png";
+} 
+img_three.onclick =() =>{
+    window.open("https://www.youtube.com/watch?v=cq-A2RJC7fg&ab_channel=Beginagain%EB%B9%84%EA%B8%B4%EC%96%B4%EA%B2%8C%EC%9D%B8");
+}
+// код четвертого изображения
+img_four.onmouseover =() =>{
+    img_four.src = "http://s192.ru/img/Panorama.webp";
+} 
+img_four.onmouseout =() =>{
+    img_four.src = "http://s192.ru/img/Panorama.png";
+} 
+img_four.onclick =() =>{
+    window.open("https://www.youtube.com/watch?v=G8GaQdW2wHc&ab_channel=StoneMusicEntertainment");
+}
+// код пятого  изображения
+img_five.onmouseover =() =>{
+    img_five.src = "http://s192.ru/img/Panorama.webp";
+} 
+img_five.onmouseout =() =>{
+    img_five.src = "http://s192.ru/img/AllForYou.png";
+} 
+img_five.onclick =() =>{
+    window.open("https://www.youtube.com/watch?v=wEgvCBcfFLI&ab_channel=Beginagain%EB%B9%84%EA%B8%B4%EC%96%B4%EA%B2%8C%EC%9D%B8");
+}
+// код шестого изображения
+img_six.onmouseover =() =>{
+    img_six.src = "http://s192.ru/img/MafiaDance.webp";
+} 
+img_six.onmouseout =() =>{
+    img_six.src = "http://s192.ru/img/MafiaDance.png";
+} 
+img_six.onclick =() =>{
+    window.open("https://www.youtube.com/watch?v=6x6ovfkWmdE&ab_channel=%EB%94%A9%EA%B3%A0%EB%AE%A4%EC%A7%81%2Fdingomusic");
+}
+</script>
+
+</body>
+</html>
+
