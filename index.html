@@ -12,10 +12,29 @@
     column-gap: 1px;
     column-rule-style: hidden;
     column-rule-width: 1px;
-    border: 2px solid red;
     background-color: #556677;
+    grid-template-columns: 60px 1fr 30px 1fr 10px;
+    /* height: 100vh;
+    width: 100%; */
+    grid-template-areas:
+    "left_block right_block";
+    height: 100vh;
+    color: white;
 }
-/* размер виде */
+/* левый блок видео */
+.left_block{
+    display: grid;
+    justify-items: center;
+  align-items: center;
+  
+}
+/* правый блок */
+.right_block{
+    display: grid;
+    align-content: center;
+    justify-content: space-around;
+}
+/* размер видео */
 .video_box{
     width: 720px;
     height: 405px;
@@ -30,14 +49,15 @@ img:hover{
 cursor:pointer;
 }
 </style>
-
 </head>
 <body class = "s">
+    <div class="left_border"></div>
     <div class="left_block">
         <video width="400" controls class="video_box">
             <source src="https://www.s192.ru/webm/JacksonWang@GOT7-100Ways.1080p.webm" type="video/webm">
         </video>
     </div>
+    <div class="centr_border"></div>
     <div class="right_block">
         <div class="row_one">
             <h2>Begin again:</h2>
@@ -55,6 +75,7 @@ cursor:pointer;
             <img class="img_6" src="http://s192.ru/img/MafiaDance.png" alt="">
         </div>
 </div>
+<div class="righ_border"></div>
 <script>
 let img_one = document.querySelector(".img_1");
 let img_two = document.querySelector(".img_2");
@@ -123,7 +144,6 @@ img_six.onclick =() =>{
     window.open("https://www.youtube.com/watch?v=6x6ovfkWmdE&ab_channel=%EB%94%A9%EA%B3%A0%EB%AE%A4%EC%A7%81%2Fdingomusic");
 }
 </script>
-
 </body>
 </html>
 
